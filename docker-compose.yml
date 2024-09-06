@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  ssh-server:
+    build:
+      context: ./server
+    container_name: ssh-server-container
+    ports:
+      - "2222:22"  # Exposing SSH on port 2222
+    expose:
+      - "22"
+    stdin_open: true
+    tty: true
+
+  ssh-client:
+    build:
+      context: ./client
+    container_name: ssh-client-container
+    stdin_open: true
+    tty: true
+    depends_on:
+      - ssh-server
+
