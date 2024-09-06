@@ -6,20 +6,18 @@ Build the server and client images from `docker-compose.yml`
 docker-compose up --build
 ```
 
-## Access
+## Check Logs and Exit
 
-When the images are built and running, you can enter them from the host with the following commadnds:
+Now check the logs (right in the terminal you started the build) and check for errors.
 
-### Client
+When you're done, hit `Ctrl + C` or `Ctrl + Break` to end the Docker Orchestration Session.
 
-```Bash
-docker exec -it ssh-client-container /bin/bash
-```
+## Re-start in the Background
 
-### Server
+You can then re-start the containers in detached mode (i.e. in the background) with:
 
 ```Bash
-docker exec -it ssh-server-container /bin/bash
+docker-compose up -d
 ```
 
-From there you can run regular Debian Linux commands, from within the respective container.
+See `docker-run-containers.md` for more. [[docker-run-containers]]
