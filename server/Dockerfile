@@ -1,5 +1,5 @@
 # server/Dockerfile
-FROM debian:slim
+FROM debian:bookworm-slim
 
 # Install OpenSSH server and Vim
 RUN apt-get update && apt-get install -y \

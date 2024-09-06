@@ -1,5 +1,5 @@
 # client/Dockerfile
-FROM debian:slim
+FROM debian:bookworm-slim
 
 # Install SSH client and Vim
 RUN apt-get update && apt-get install -y \
