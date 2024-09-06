@@ -23,3 +23,14 @@ docker exec -it ssh-server-container /bin/bash
 ```
 
 From there you can run regular Debian Linux commands, from within the respective container.
+
+## Shut Down Containers
+
+And here's how you gracefully shot down running containers:
+
+```Bash
+docker-compose down
+```
+
+Note: You may lose data written to the containers unless you export the changes to a new image.
+
