@@ -6,7 +6,13 @@ Enter the container:
 docker exec -it ssh-server-container /bin/bash
 ```
 
-Add a user from within the container:
+Make sure you add the root user's password first:
+
+```Bash
+passwd
+```
+
+Then add a user from within the container:
 
 ```Bash
 useradd -m -s /bin/bash testuser
@@ -15,7 +21,7 @@ useradd -m -s /bin/bash testuser
 Set user password:
 
 ```Bash
-echo "testusers:password" | chpasswd
+echo "testuser:password" | chpasswd
 ```
 
 Add user to sudoer's group:

@@ -8,8 +8,10 @@ ssh -V
 
 ## Edit the config file
 
+Assuming that you're root, otherwise add `sudo`:
+
 ```Bash
-sudo vim /etc/ssh/sshd_config
+vim /etc/ssh/sshd_config
 ```
 
 Add:
@@ -28,24 +30,25 @@ PubkeyAcceptedAlgorithms ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecd
 ## Restart SSH
 
 ```Bash
-sudo systemctl restart sshd
-```
-
-Or:
-
-```Bash
-sudo service sshd restart
+service ssh restart
 ```
 
 ## Generate Host Keys
 
 ```Bash
-sudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ''
+ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ''
+```
+
+## Insure
+
+```Bash
+chown root:root /etc/ssh/ssh_host_*
+chmod 600 /etc/ssh/ssh_host_*
 ```
 
 ## Verify
 
 ```Bash
-sudo journalctl -u sshd
+journalctl -u sshd
 ```
 
