@@ -2,6 +2,10 @@
 
 This project provides a simple Docker-based setup for running and testing an SSH server and client. It consists of two services: one for the SSH server and another for the client, allowing easy interaction between them.
 
+## Why?
+
+So you can test various SSH functions, such as configuring an SSH server, SSH-ing into a server from a client, creating a passwordless login scheme with Ed25519 public key, and so on. Since it's all packaged into two small images, and orchestrated with Docker-Compose, it creates a safe environment for testing SSH settings without exposing your entire computer.
+
 ## Project Structure
 
 ```
