@@ -4,17 +4,14 @@ This project provides a simple Docker-based setup for running and testing an SSH
 
 ## Project Structure
 
+```
 . 
-
 ├── client/ # Docker build context for the SSH client 
-
 ├── server/ # Docker build context for the SSH server
-
 ├── documentation/ # Other documentation, tutorials and help
-
 ├── docker-compose.yml # Docker Compose file to orchestrate the services 
-
 └── README.md # This file
+```
 
 ## How to Use
 
