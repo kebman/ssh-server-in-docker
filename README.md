@@ -5,10 +5,15 @@ This project provides a simple Docker-based setup for running and testing an SSH
 ## Project Structure
 
 . 
+
 ├── client/ # Docker build context for the SSH client 
+
 ├── server/ # Docker build context for the SSH server
+
 ├── documentation/ # Other documentation, tutorials and help
+
 ├── docker-compose.yml # Docker Compose file to orchestrate the services 
+
 └── README.md # This file
 
 ## How to Use
@@ -42,7 +47,7 @@ Replace `user` with the actual username you add in the Docker container.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
 
 ## Contributing
 
