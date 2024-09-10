@@ -47,7 +47,7 @@ Replace `user` with the actual username you add in the Docker container.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contributing
 
